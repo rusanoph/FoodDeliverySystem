@@ -1,0 +1,401 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B42552B-FACF-4466-8A46-B0DD0B9311B8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FoodDeliverySys</RootNamespace>
+    <AssemblyName>FoodDeliverySys</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Category.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Product.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Images\login.png" />
+    <Content Include="Images\No_image.png" />
+    <Content Include="TemplatesFilesAdmin\css\animate.css\css\animate.css" />
+    <Content Include="TemplatesFilesAdmin\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="TemplatesFilesAdmin\css\jquery.mCustomScrollbar.css" />
+    <Content Include="TemplatesFilesAdmin\css\morris.js\css\morris.css" />
+    <Content Include="TemplatesFilesAdmin\css\style.css" />
+    <Content Include="TemplatesFilesAdmin\datatables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="TemplatesFilesAdmin\datatables\css\icon-font.min.css" />
+    <Content Include="TemplatesFilesAdmin\datatables\css\jquery.dataTables.min.css" />
+    <Content Include="TemplatesFilesAdmin\datatables\css\responsive.bootstrap4.min.css" />
+    <Content Include="TemplatesFilesAdmin\datatables\css\responsive.dataTables.min.css" />
+    <Content Include="TemplatesFilesAdmin\datatables\images\sort_asc.png" />
+    <Content Include="TemplatesFilesAdmin\datatables\images\sort_asc_disabled.png" />
+    <Content Include="TemplatesFilesAdmin\datatables\images\sort_both.png" />
+    <Content Include="TemplatesFilesAdmin\datatables\images\sort_desc.png" />
+    <Content Include="TemplatesFilesAdmin\datatables\images\sort_desc_disabled.png" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\buttons.flash.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\buttons.html5.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\buttons.print.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\datatable-setting.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\dataTables.buttons.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\dataTables.responsive.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\jszip.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\pdfmake.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\responsive.bootstrap4.min.js" />
+    <Content Include="TemplatesFilesAdmin\datatables\js\vfs_fonts.js" />
+    <Content Include="TemplatesFilesAdmin\icon\icofont\css\icofont.css" />
+    <Content Include="TemplatesFilesAdmin\icon\icofont\fonts\icofont.svg" />
+    <Content Include="TemplatesFilesAdmin\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="TemplatesFilesAdmin\icon\themify-icons\themify-icons.css" />
+    <Content Include="TemplatesFilesAdmin\images\auth\logo-dark.png" />
+    <Content Include="TemplatesFilesAdmin\images\auth\Logo-small-bottom.png" />
+    <Content Include="TemplatesFilesAdmin\images\auth\logo.png" />
+    <Content Include="TemplatesFilesAdmin\images\avatar-1.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\avatar-2.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\avatar-3.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\avatar-4.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\bg.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\favicon.ico" />
+    <Content Include="TemplatesFilesAdmin\images\flags\ENGLISH.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\flags\FRANCE.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\flags\PORTO.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\flags\SPAIN.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\logo.png" />
+    <Content Include="TemplatesFilesAdmin\images\mega-menu\01.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\mega-menu\02.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\mega-menu\03.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\mega-menu\04.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\mega-menu\05.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\mega-menu\06.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\pattern2.jpg" />
+    <Content Include="TemplatesFilesAdmin\images\user.png" />
+    <Content Include="TemplatesFilesAdmin\js\bootstrap-growl.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\classie.js" />
+    <Content Include="TemplatesFilesAdmin\js\classie\classie.js" />
+    <Content Include="TemplatesFilesAdmin\js\common-pages.js" />
+    <Content Include="TemplatesFilesAdmin\js\demo-12.js" />
+    <Content Include="TemplatesFilesAdmin\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="TemplatesFilesAdmin\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\jquery.mousewheel.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\jquery\jquery.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\modernizr\css-scrollbars.js" />
+    <Content Include="TemplatesFilesAdmin\js\modernizr\modernizr.js" />
+    <Content Include="TemplatesFilesAdmin\js\morris.js\morris.js" />
+    <Content Include="TemplatesFilesAdmin\js\pcoded.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\popper.js\popper.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\raphael\raphael.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\script.js" />
+    <Content Include="TemplatesFilesAdmin\js\script.min.js" />
+    <Content Include="TemplatesFilesAdmin\js\SmoothScroll.js" />
+    <Content Include="TemplatesFilesAdmin\pages\accordion\accordion.js" />
+    <Content Include="TemplatesFilesAdmin\pages\accordion\accordion.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\chart\morris\morris-custom-chart.js" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\css\export.css" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\light.js" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="TemplatesFilesAdmin\pages\dashboard\custom-dashboard.js" />
+    <Content Include="TemplatesFilesAdmin\pages\google-maps\gmaps.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\google-maps\jquery.gmaps.js" />
+    <Content Include="TemplatesFilesAdmin\pages\icon-modal.js" />
+    <Content Include="TemplatesFilesAdmin\pages\notification\notification.css" />
+    <Content Include="TemplatesFilesAdmin\pages\notification\notification.js" />
+    <Content Include="TemplatesFilesAdmin\pages\todo\todo.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\amcharts.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\ammap.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\ammap.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\continentsLow.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\continentsLow.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\gauge.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\gauge.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\light.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\light.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\pie.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\pie.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\serial.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\serial.min.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\worldLow.js" />
+    <Content Include="TemplatesFilesAdmin\pages\widget\amchart\worldLow.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="TemplatesFiles\css\bootstrap.css" />
+    <Content Include="TemplatesFiles\css\font-awesome.min.css" />
+    <Content Include="TemplatesFiles\css\responsive.css" />
+    <Content Include="TemplatesFiles\css\style.css" />
+    <Content Include="TemplatesFiles\images\about-img.png" />
+    <Content Include="TemplatesFiles\images\client1.jpg" />
+    <Content Include="TemplatesFiles\images\client2.jpg" />
+    <Content Include="TemplatesFiles\images\f1.png" />
+    <Content Include="TemplatesFiles\images\f2.png" />
+    <Content Include="TemplatesFiles\images\f3.png" />
+    <Content Include="TemplatesFiles\images\f4.png" />
+    <Content Include="TemplatesFiles\images\f5.png" />
+    <Content Include="TemplatesFiles\images\f6.png" />
+    <Content Include="TemplatesFiles\images\f7.png" />
+    <Content Include="TemplatesFiles\images\f8.png" />
+    <Content Include="TemplatesFiles\images\f9.png" />
+    <Content Include="TemplatesFiles\images\favicon.png" />
+    <Content Include="TemplatesFiles\images\hero-bg.jpg" />
+    <Content Include="TemplatesFiles\images\o1.jpg" />
+    <Content Include="TemplatesFiles\images\o2.jpg" />
+    <Content Include="TemplatesFiles\js\bootstrap.js" />
+    <Content Include="TemplatesFiles\js\custom.js" />
+    <Content Include="TemplatesFiles\js\jquery-3.4.1.min.js" />
+    <Content Include="User\About.aspx" />
+    <Content Include="User\Cart.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\Default.aspx" />
+    <Content Include="User\Login.aspx" />
+    <Content Include="User\Menu.aspx" />
+    <Content Include="User\Profile.aspx" />
+    <Content Include="User\Registration.aspx" />
+    <Content Include="User\SliderUserControl.ascx" />
+    <Content Include="User\TestTemplatePage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SliderUserControl.ascx.cs">
+      <DependentUpon>SliderUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SliderUserControl.ascx.designer.cs">
+      <DependentUpon>SliderUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TestTemplatePage.aspx.cs">
+      <DependentUpon>TestTemplatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TestTemplatePage.aspx.designer.cs">
+      <DependentUpon>TestTemplatePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TemplatesFiles\css\style.css.map" />
+    <Content Include="TemplatesFiles\css\style.scss" />
+    <Content Include="TemplatesFiles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="TemplatesFiles\fonts\fontawesome-webfont.woff" />
+    <Content Include="TemplatesFiles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="User\User.Master" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="TemplatesFilesAdmin\icon\icofont\fonts\icofont.eot" />
+    <Content Include="TemplatesFilesAdmin\icon\icofont\fonts\icofont.ttf" />
+    <Content Include="TemplatesFilesAdmin\icon\icofont\fonts\icofont.woff" />
+    <Content Include="TemplatesFilesAdmin\icon\themify-icons\fonts\themify.eot" />
+    <Content Include="TemplatesFilesAdmin\icon\themify-icons\fonts\themify.ttf" />
+    <Content Include="TemplatesFilesAdmin\icon\themify-icons\fonts\themify.woff" />
+    <Content Include="TemplatesFilesAdmin\datatables\fonts\ionicons.ttf" />
+    <Content Include="TemplatesFilesAdmin\datatables\fonts\ionicons.woff" />
+    <Content Include="TemplatesFilesAdmin\datatables\fonts\themify.ttf" />
+    <Content Include="TemplatesFilesAdmin\datatables\fonts\themify.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\Category\" />
+    <Folder Include="Images\Product\" />
+    <Folder Include="Images\UserProfileImg\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64081</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64081/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

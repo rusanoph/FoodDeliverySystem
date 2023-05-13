@@ -1,0 +1,7 @@
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\bin\FoodDeliverySys.dll.config
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\bin\FoodDeliverySys.dll
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\bin\FoodDeliverySys.pdb
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\obj\Debug\FoodDeliverySys.csproj.AssemblyReference.cache
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\obj\Debug\FoodDeliverySys.csproj.CoreCompileInputs.cache
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\obj\Debug\FoodDeliverySys.dll
+C:\Users\hatru\Desktop\MaFolder\Z\1AUS\4-й курс 1 сем\Проектирование информационных систем\MainRestaurantManagemntSys\FoodDeliverySys\FoodDeliverySys\obj\Debug\FoodDeliverySys.pdb

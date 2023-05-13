@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="FoodDeliverySys.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<title>Админ-панель</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="CodedThemes">
+	<meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+	<meta name="author" content="CodedThemes">
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<!-- Required Fremwork -->
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/css/bootstrap/css/bootstrap.min.css">
+	<!-- themify-icons line icon -->
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/icon/themify-icons/themify-icons.css">
+	<!-- ico font -->
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/icon/icofont/css/icofont.css">
+	<!-- Style.css -->
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/css/jquery.mCustomScrollbar.css">
+
+    <!-- Стили таблиц -->
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../TemplatesFilesAdmin/datatables/css/icon-font.min.css">
+
+
+
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+
+</head>
+<body>
+	<form id="form1" runat="server">
+
+	<div id="pcoded" class="pcoded">
+		<div class="pcoded-overlay-box"></div>
+		<div class="pcoded-container navbar-wrapper">
+
+			<nav class="navbar header-navbar pcoded-header">
+				<div class="navbar-wrapper">
+
+					<div class="navbar-logo">
+						<a class="mobile-menu" id="mobile-collapse" href="#!">
+							<i class="ti-menu"></i>
+						</a>
+						<a class="mobile-options">
+							<i class="ti-more"></i>
+						</a>
+					</div>
+
+					<div class="navbar-container container-fluid">
+						<ul class="nav-right">
+							<li class="user-profile header-notification">
+								<a href="#!">
+									<img src="../TemplatesFilesAdmin/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+									<span>Администратор</span>
+									<i class="ti-angle-down"></i>
+								</a>
+								<ul class="show-notification profile-notification">
+									<li>
+										<%--<a href="auth-normal-sign-in.html">
+											<i class="ti-layout-sidebar-left"></i> Выйти
+										</a>--%>
+										<asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_Click">
+											<i class="ti-layout-sidebar-left"></i> Выйти
+										</asp:LinkButton>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="pcoded-main-container">
+				<div class="pcoded-wrapper">
+
+                    <%-- Боковая панель навигации начало --%>
+					<nav class="pcoded-navbar">
+						<div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+						<div class="pcoded-inner-navbar main-menu" id="navbarSupportedContentent">
+
+							<div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Панель управления</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="Dashboard.aspx">
+										<span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.dash.main">Сводная информация<br>(В разработке)</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>
+
+							<div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Управление категориями</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="Category.aspx">
+										<span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.form-components.main">Категории</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>
+
+							<div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Управление товарами</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="Product.aspx">
+										<span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.form-components.main">Товары</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>
+
+							<div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Статус товаров в доставке</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="#">
+										<span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Обновить статус заказов</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>
+
+							<div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Список пользователей</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="Users.aspx">
+										<span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.form-components.main">Пользователи</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>
+							
+							<div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Отзывы Гостей</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="#">
+										<span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.form-components.main">Отзывы<br>(в разработке)</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>
+
+							<%--<div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Report</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li>
+									<a href="Product.aspx">
+										<span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+										<span class="pcoded-mtext" data-i18n="nav.form-components.main">Selling Report</span>
+										<span class="pcoded-mcaret"></span>
+									</a>
+								</li>
+							</ul>--%>
+						</div>
+					</nav>
+                    <%-- Боковая панель навигации конец --%>
+				   
+					
+					<div class="pcoded-content">
+
+						<%-- Путь страницы начало --%>
+						<div class="card borderless-card">
+							<div class="card-block danger-breadcrumb">
+								<div class="page-header-breadcrumb">
+									<ul class="breadcrumb-title">
+										<li class="breadcrumb-item">
+											<a href="#!">
+												<i class="icofont icofont-home"></i>
+											</a>
+										</li>
+										<li class="breadcrumb-item"><a href="Dashboard.aspx">Dashboard</a></li>
+										<li class="breadcrumb-item"><a href="#"> <%Response.Write(Session["breadCrum"]); %> </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+                        <%-- Путь страницы конец --%>
+
+						<%-- Содержание страницы начало --%>
+						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+						</asp:ContentPlaceHolder>
+						<%-- Содержание страницы конец --%>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	
+	</form>
+
+	<!-- Required Jquery -->
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/popper.js/popper.min.js"></script>
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/bootstrap/js/bootstrap.min.js"></script>
+	<!-- jquery slimscroll js -->
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<!-- modernizr js -->
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/modernizr/modernizr.js"></script>
+	<!-- am chart -->
+	<script src="../TemplatesFilesAdmin/pages/widget/amchart/amcharts.min.js"></script>
+	<script src="../TemplatesFilesAdmin/pages/widget/amchart/serial.min.js"></script>
+	<!-- Todo js -->
+	<script type="text/javascript " src="../TemplatesFilesAdmin/pages/todo/todo.js "></script>
+	<!-- Custom js -->
+	<script type="text/javascript" src="../TemplatesFilesAdmin/pages/dashboard/custom-dashboard.js"></script>
+	<script type="text/javascript" src="../TemplatesFilesAdmin/js/script.js"></script>
+	<script type="text/javascript " src="../TemplatesFilesAdmin/js/SmoothScroll.js"></script>
+	<script src="../TemplatesFilesAdmin/js/pcoded.min.js"></script>
+	<script src="../TemplatesFilesAdmin/js/demo-12.js"></script>
+	<script src="../TemplatesFilesAdmin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+	<script>
+		var $window = $(window);
+		var nav = $('.fixed-button');
+			$window.scroll(function(){
+				if ($window.scrollTop() >= 200) {
+				 nav.addClass('active');
+			 }
+			 else {
+				 nav.removeClass('active');
+			 }
+		 });
+	</script>
+
+	<!-- Скрипты для Таблиц - начало -->
+	<script src="../TemplatesFilesAdmin/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/responsive.bootstrap4.min.js"></script>
+	<!-- Кнопки для экспорта данных -->
+	<script src="../TemplatesFilesAdmin/datatables/js/dataTables.buttons.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/buttons.bootstrap4.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/buttons.print.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/buttons.html5.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/buttons.flash.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/pdfmake.min.js"></script>
+	<script src="../TemplatesFilesAdmin/datatables/js/vfs_fonts.js"></script>
+	<!-- Настройки таблиц -->
+	<script src="../TemplatesFilesAdmin/datatables/js/datatable-setting.js"></script>
+	<!-- Скрипты для Таблиц - конец -->
+	
+
+</body>
+</html>
